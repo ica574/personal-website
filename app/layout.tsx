@@ -1,6 +1,7 @@
 import React from 'react';
 import './globals.css'
 import Footer from '../components/Footer';
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = {
   title: 'Isaac Cilia Attard',
@@ -17,6 +18,7 @@ export default function RootLayout({
       <body className='flex flex-col h-screen bg-center bg-no-repeat bg-cover bg-gradient-to-tr from-[#0C0C20] to-[#494099]'>
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   )
