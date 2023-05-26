@@ -1,23 +1,14 @@
 "use client"
 
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 
 const Navbar = () => {
-  useEffect(() => {
-    const toggleButton = document.querySelector('[data-collapse-toggle="navbar-default"]');
-    const navbar = document.querySelector('#navbar-default');
+  const [isNavbarOpen, setIsNavbarOpen] = useState(false);
 
-    const toggleNavbar = () => {
-      navbar.classList.toggle('hidden');
-    };
-
-    toggleButton.addEventListener('click', toggleNavbar);
-
-    return () => {
-      toggleButton.removeEventListener('click', toggleNavbar);
-    };
-  }, []);
+  const toggleNavbar = () => {
+    setIsNavbarOpen(!isNavbarOpen);
+  };
 
   return (
     <nav className="bg-opacity-100">
@@ -26,11 +17,11 @@ const Navbar = () => {
           <span className="self-center text-2xl font-semibold whitespace-nowrap text-[#94E6E5]">Isaac Cilia Attard</span>
         </Link>
         <button
-          data-collapse-toggle="navbar-default"
           type="button"
           className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
           aria-controls="navbar-default"
-          aria-expanded="false"
+          aria-expanded={isNavbarOpen}
+          onClick={toggleNavbar}
         >
           <span className="sr-only">Open main menu</span>
           <svg
@@ -47,11 +38,23 @@ const Navbar = () => {
             ></path>
           </svg>
         </button>
-        <div className="hidden w-full md:block md:w-auto" id="navbar-default">
+        <div
+          className={`${
+            isNavbarOpen ? 'block' : 'hidden'
+          } w-full md:block md:w-auto`}
+          id="navbar-default"
+        >
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
             <li>
-              <Link href="https://isaacciliaattard.com/" className="block py-2 pl-3 pr-4 text-white bg-[#776BE2] rounded md:bg-transparent md:text-[#776BE2] md:p-0" aria-current="page">Home</Link>
+              <Link
+                href="https://isaacciliaattard.com/"
+                className="block py-2 pl-3 pr-4 text-white bg-[#776BE2] rounded md:bg-transparent md:text-[#776BE2] md:p-0"
+                aria-current="page"
+              >
+                Home
+              </Link>
             </li>
+            {/* Add your other navigation links here */}
           </ul>
         </div>
       </div>
