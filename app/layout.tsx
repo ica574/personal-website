@@ -1,5 +1,6 @@
 import React from 'react';
 import './globals.css'
+import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { Analytics } from '@vercel/analytics/react';
 
@@ -15,7 +16,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className='flex flex-col h-screen bg-center bg-no-repeat bg-cover bg-gradient-to-tr from-[#0C0C20] to-[#494099]'>
+      <body className='h-screen bg-center bg-no-repeat bg-cover bg-gradient-to-tr from-[#000000] to-[#24104F]'>
+        <Navbar />
         {children}
         <Footer />
         <Analytics />
