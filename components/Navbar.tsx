@@ -54,7 +54,6 @@ const Navbar = () => {
                 Home
               </Link>
             </li>
-            {/* Add your other navigation links here */}
           </ul>
         </div>
       </div>
