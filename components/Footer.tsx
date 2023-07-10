@@ -3,13 +3,13 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-opacity-100">
-      <div className="mx-auto px-4 py-6 max-w-7xl sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center justify-between md:flex-row">
-          <span className="text-sm text-gray-500 dark:text-gray-300 sm:text-center md:text-left">
+    <footer className="bg-opacity-100 fixed inset-x-0 bottom-0">
+      <div className="">
+        <div className="flex flex-col items-center justify-between md:flex-row md: px-5">
+          <span className="text-sm text-gray-500 p-1 sm:text-center md:text-left">
             © 2023 Isaac Cilia Attard
           </span>
-          <div className="flex mt-4 space-x-6 sm:justify-center md:mt-0">
+          <div className="flex p-5 md:py-5 md:px-0 space-x-6 sm:justify-center md:mt-0">
             <Link
               href="https://twitter.com/IsaaCiliaAttard"
               target="_blank"
