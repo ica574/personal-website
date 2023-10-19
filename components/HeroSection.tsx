@@ -20,6 +20,9 @@ const HeroSection = () => {
             src={profilePicture}
             alt="Picture of me"
             priority
+            width={600}
+            height={600}
+            sizes="(max-width: 640px) 50vw, 30vw"
           />
         </div>
         <div className="space-y-2 lg:space-y-2">
