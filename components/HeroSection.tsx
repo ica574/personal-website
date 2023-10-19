@@ -32,7 +32,7 @@ const HeroSection = () => {
           <p className="text-lg lg:text-xl italic font-semibold text-white ">
             <q>Nothing is to be feared, it is only to be understood.</q>
           </p>
-          <p>&mdash; Marie Curie</p>
+          <p>&mdash; Marie Curie &mdash;</p>
         </div>
         <div className="flex flex-row items-center justify-center space-x-4">
           <Link href="https://github.com/ica574" target="_blank">

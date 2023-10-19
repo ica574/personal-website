@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="h-screen bg-center bg-no-repeat bg-cover bg-gradient-to-tr from-[#000000] to-[#2f0785]">
+      <body className="overflow-hidden h-screen bg-gradient-to-tr from-[#000000] to-[#2f0785]">
         {children}
       </body>
     </html>
