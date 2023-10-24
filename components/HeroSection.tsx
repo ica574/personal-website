@@ -38,17 +38,29 @@ const HeroSection = () => {
           <p>&mdash; Marie Curie &mdash;</p>
         </div>
         <div className="flex flex-row items-center justify-center space-x-4">
-          <Link href="https://github.com/ica574" target="_blank">
+          <Link
+            href="https://github.com/ica574"
+            aria-label="A link to my GitHub profile"
+            target="_blank"
+          >
             <FontAwesomeIcon icon={faGithub} width={20} />
           </Link>
-          <Link href="mailto:contact@isaacciliaattard.com">
+          <Link
+            aria-label="My email address"
+            href="mailto:contact@isaacciliaattard.com"
+          >
             <FontAwesomeIcon icon={faEnvelope} width={20} />
           </Link>
-          <Link href="https://twitter.com/IsaaCiliaAttard" target="_blank">
+          <Link
+            href="https://twitter.com/IsaaCiliaAttard"
+            aria-label="A link to my X account"
+            target="_blank"
+          >
             <FontAwesomeIcon icon={faXTwitter} width={20} />
           </Link>
           <Link
             href="https://www.linkedin.com/in/isaacciliaattard/"
+            aria-label="A link to my LinkedIn profile"
             target="_blank"
           >
             <FontAwesomeIcon icon={faLinkedin} width={20} />
