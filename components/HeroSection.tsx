@@ -47,7 +47,7 @@ const HeroSection = () => {
           </Link>
           <Link
             aria-label="My email address"
-            href="mailto:contact@isaacciliaattard.com"
+            href="mailto:icattard@FreeBSD.org"
           >
             <FontAwesomeIcon icon={faEnvelope} width={20} />
           </Link>
