@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Contact & Links</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- IBM Plex Mono for UNIX-y vibe -->
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <style>
+
+    /* SGI IRIX Indigo Magic Colors */
+    :root {
+      --irix-bg: #1c1c6a;        /* Deep indigo */
+      --irix-card-bg: #2e2e92;   /* Lighter indigo panel */
+      --irix-text: #e0e0ff;      /* Soft light blue-white */
+      --irix-accent: #00ffff;    /* Bright cyan */
+      --irix-shadow: rgba(0, 255, 255, 0.3);
+      --irix-hover: #ff66cc;     /* Magenta hover */
+    }
+
+    body {
+      font-family: 'VT323', monospace;
+      font-size: 1.5rem; /* Slightly bigger for legibility */
+      color: var(--irix-text);
+
+      /* CRT background with horizontal scanlines */
+      background:
+        repeating-linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0.03) 0px,
+          rgba(255, 255, 255, 0.03) 1px,
+          transparent 1px,
+          transparent 3px
+        ),
+        var(--irix-bg);
+
+      background-size: 100% 4px;
+    }
+
+
+    .card {
+      /* CRT-like streaked background inside the card */
+      background:
+        repeating-linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0.04) 0px,
+          rgba(255, 255, 255, 0.04) 1px,
+          transparent 1px,
+          transparent 3px
+        ),
+        var(--irix-card-bg);
+
+      border: 1px solid var(--irix-accent);
+
+      /* Retro offset shadow: layered cyan + dark */
+      box-shadow:
+        4px 4px 0px rgba(0, 255, 255, 0.6),  /* cyan offset */
+        8px 8px 15px rgba(0, 0, 0, 0.5);     /* dark blur */
+
+      max-width: 500px;
+      width: 100%;
+    }
+
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      padding: 0.6rem 1rem;
+      border: 1px solid var(--irix-accent);
+      border-radius: 6px;
+      margin-bottom: 0.8rem;
+      transition: background-color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .contact-item:hover {
+      background-color: rgba(0, 255, 255, 0.1);
+      border-color: var(--irix-hover);
+    }
+
+    .contact-icon {
+      font-size: 1.8rem;
+      color: var(--irix-accent);
+      margin-right: 0.8rem;
+      min-width: 36px;
+      text-align: center;
+    }
+
+    .contact-link {
+      color: var(--irix-text);
+      text-decoration: none;
+    }
+
+    .contact-link:hover {
+      color: var(--irix-hover);
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body class="d-flex align-items-center justify-content-center vh-100">
+
+  <div class="card text-center p-4 text-white">
+    <h1 class="fw-bold">Isaac Cilia Attard</h1>
+    <p class="mb-4">AI, Quantum Computing, Systems Engineering.</p>
+
+    <!-- Email -->
+    <div class="contact-item">
+      <i class="fas fa-envelope contact-icon"></i>
+      <a href="mailto:icattard@FreeBSD.org" class="contact-link">icattard [at] FreeBSD [dot] org</a>
+    </div>
+
+    <!-- Signal -->
+    <div class="contact-item">
+      <i class="fa-brands fa-signal-messenger contact-icon"></i>
+      <a href="https://signal.me/#eu/lRzOw90cXHBJd0CNLpuNGygT20yE1kB6f9XmDrtQMFm5oQ_lzf5NNKa4hcjsgEuE" class="contact-link" target="_blank">IsaacCiliaAttard.16</a>
+    </div>
+
+    <!-- FreeBSD -->
+    <div class="contact-item">
+      <i class="fa-brands fa-freebsd contact-icon"></i>
+      <a href="https://wiki.freebsd.org/IsaacCiliaAttard" class="contact-link" target="_blank">IsaacCiliaAttard</a>
+    </div>
+
+    <!-- GitHub -->
+    <div class="contact-item">
+      <i class="fab fa-github contact-icon"></i>
+      <a href="https://github.com/ica574" class="contact-link" target="_blank">ica574</a>
+    </div>
+
+    <div class="contact-item">
+        <i class="fa-brands fa-orcid contact-icon"></i>
+      <a href="https://orcid.org/0009-0006-7825-9620" class="contact-link" target="_blank">0009-0006-7825-9620</a>
+    </div>
+  </div>
+
+</body>
+</html>
