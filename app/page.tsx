@@ -1,12 +1,9 @@
-import React from "react";
-import HeroSection from "@/components/HeroSection";
+import Hero from "@/components/Hero";
 
-const Hero = () => {
+export default function Home() {
   return (
-    <main>
-      <HeroSection />
+    <main className="relative min-h-screen">
+      <Hero />
     </main>
   );
-};
-
-export default Hero;
+}
